@@ -1,0 +1,25 @@
+# TraversalWeb
+## 项目说明
+### 服务端
+* 将服务或内网穿透的地址与端口更新到域名服务商
+* 将该项目静态网页部署到托管服务商
+### 客户端
+* 用户端浏览器通过DoH解析端口完成服务跳转
+## 查询方案
+### TXT
+* 域名：{name}
+* 记录：{port}
+* 解析：https://{name}:{port}
+* 访问：https://example.github.io/?name={name}&type=16
+### AAAA(IP4P)
+* 域名：{name}
+* 记录：2001::{port}:{ipv4-hi16}:{ipv4-lo16}
+* 解析：https://{ipv4}:{port}
+* 访问：https://example.github.io/?name={name}&type=28
+### SRV
+* 域名：{name}
+* 记录：{priority} {weight} {port} {server}
+* 解析：https://{server}:{port}
+* 访问：https://example.github.io/?name={name}&type=33
+## 编译运行
+* 使用package.json内scripts命令
