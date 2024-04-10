@@ -1,5 +1,5 @@
 # TraversalWeb
-## 项目说明
+## 实现方案
 ### 服务端
 * 将服务或内网穿透的地址与端口更新到域名服务商
 * 将该项目静态网页部署到托管服务商
@@ -21,5 +21,3 @@
 * 记录：{priority} {weight} {port} {server}
 * 解析：https://{server}:{port}
 * 访问：https://example.github.io/?name={name}&type=33
-## 编译运行
-* 使用package.json内scripts命令
